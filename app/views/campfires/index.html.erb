@@ -1,0 +1,16 @@
+campfire 新規投稿
+<%= link_to "新規投稿ページへ", campfires_new_path %>
+<div class="campfires-container">
+  <% @campfire.each do |t| %>
+    <div class="tweet">
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= t.name %>
+      <%= t.gomi %>
+      <%= t.shower %>
+      <%= t.shop %>
+      <%= t.maki %>
+      <%= t.created_at %>
+      <%= t.image %>
+    </div>
+  <% end %>
+</div>

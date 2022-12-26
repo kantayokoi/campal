@@ -1,0 +1,24 @@
+<h1>キャン</h1>
+<h3>新規Tweet</h3>
+<%= form_for @campfire do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name , :size => 140 %>
+    <%= f.label :gomi %>
+    <%= f.text_field :gomi , :size => 140 %>
+    <%= f.label :shower %>
+    <%= f.text_field :shower , :size => 140 %>
+    <%= f.label :shop %>
+    <%= f.text_field :shop , :size => 140 %>
+    <%= f.label :maki %>
+    <%= f.text_field :maki , :size => 140 %>
+  </div>
+
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+</div>
+
+  <%= f.submit "Tweetする" %>
+<% end %>
+<%= link_to "Tweet一覧に戻る", campfires_path %>
